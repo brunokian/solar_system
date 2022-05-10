@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Planets from './data/planets';
+// import Planets from './data/planets';
 
 import Header from './components/Header';
-import PlanetCard from './components/PlanetCard';
+// import PlanetCard from './components/PlanetCard';
 import SolarSystem from './components/SolarSystem';
+import Missions from './components/Missions';
 
 // import Title from './components/Title';
 
@@ -14,13 +15,7 @@ class App extends React.Component {
       <div>
         <Header />
         <SolarSystem />
-        {
-          Planets.map((obj) => (<PlanetCard
-            key={ obj.name }
-            planetName={ obj.name }
-            planetImage={ obj.image }
-          />))
-        }
+        <Missions />
       </div>
     );
   }
