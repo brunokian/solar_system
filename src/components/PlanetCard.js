@@ -4,26 +4,24 @@ import PropTypes from 'prop-types';
 
 class PlanetCard extends React.Component {
   render() {
-    const { cardinfo } = this.props;
-    const { name, image } = cardinfo;
+    const { planetName, planetImage } = this.props;
     return (
       <div data-testid="planet-card">
-        <p>{ name }</p>
-        <img src={ image } alt="" />
+        <p>{ planetName }</p>
+        <img src={ planetImage } alt={ `Planeta ${planetName}` } />
       </div>
     );
   }
 }
 
 PlanetCard.propTypes = {
-  cardinfo: PropTypes.shape({
-    name: PropTypes.string,
-    image: PropTypes.string,
-  }),
+  planetName: PropTypes.string,
+  planetImage: PropTypes.string,
 };
 
 PlanetCard.defaultProps = {
-  cardinfo: undefined,
+  planetName: undefined,
+  planetImage: undefined,
 };
 
 export default PlanetCard;

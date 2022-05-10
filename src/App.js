@@ -15,7 +15,11 @@ class App extends React.Component {
         <Header />
         <SolarSystem />
         {
-          Planets.map((obj) => <PlanetCard key={ obj.name } cardinfo={ obj } />)
+          Planets.map((obj) => (<PlanetCard
+            key={ obj.name }
+            planetName={ obj.name }
+            planetImage={ obj.image }
+          />))
         }
       </div>
     );
